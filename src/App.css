@@ -264,3 +264,61 @@ body {
   line-height: 1.05;
   margin-bottom: 3.2rem;
 }
+
+.modal-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-bottom: 1px solid #cfd8dc;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.icon {
+  display: inline-block;
+  width: 1.5rem;
+}
+
+.sub-title {
+  display: inline-block;
+  padding: 1.8rem 0 0.5rem 1.5rem;
+}
+
+.modal-buttons {
+  padding: 1rem 1.5rem 1.5rem 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  row-gap: 1rem;
+}
+
+.wallet-type {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+
+  padding: 0.5rem;
+  border: 1px solid #cfd8dc;
+  border-radius: 12px;
+
+  transform: all 0.3s ease-in-out;
+}
+
+.wallet-type:hover {
+  cursor: pointer;
+  background-color: #f7f7f7;
+}
+
+.btn-logo {
+  display: inline-block;
+  width: 3rem;
+}
+
+.chevron {
+  margin-left: auto;
+}

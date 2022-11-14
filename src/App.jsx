@@ -51,23 +51,28 @@ function App() {
       <Footer />
       {modalIsShown && (
         <Modal onClose={hideModalHandler}>
-          <div className="Heading">
+          <div className="modal-heading">
             <p className="title">Connect Wallet</p>
-            <figure className="cross">
-              <img src={crossIcon} alt="cross" className="cross-icon" />
-            </figure>
+            <div className="cross">
+              <img
+                src={crossIcon}
+                alt="cross"
+                className="cross icon"
+                onClick={hideModalHandler}
+              />
+            </div>
           </div>
           <span className="sub-title">Choose your preferred wallet:</span>
           <div className="modal-buttons">
             <button className="wallet-type">
               <img src={metaMask} alt="Metamask" className="btn-logo" />
               <p className="btn-text">Metamask</p>
-              <img src={chevronRight} alt="chevron" className="chevron-icon" />
+              <img src={chevronRight} alt="chevron" className="chevron icon" />
             </button>
             <button className="wallet-type">
               <img src={walletConnect} alt="Metamask" className="btn-logo" />
               <p className="btn-text">WalletConnect</p>
-              <img src={chevronRight} alt="chevron" className="chevron-icon" />
+              <img src={chevronRight} alt="chevron" className="chevron icon" />
             </button>
           </div>
         </Modal>
