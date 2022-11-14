@@ -20,30 +20,30 @@ function Header(props) {
       <nav className={`nav `}>
         <ul className="nav__list">
           <li>
-            <Link to="/" className="nav__link">
+            <Link to="/" className="nav__link" onClick={handleNav}>
               Home
             </Link>
           </li>
           <li>
-            <Link to="place" className="nav__link">
+            <Link to="place" className="nav__link" onClick={handleNav}>
               Place to stay
             </Link>
           </li>
           <li>
-            <Link to="nft" className="nav__link">
+            <Link to="nft" className="nav__link" onClick={handleNav}>
               NFTS
             </Link>
           </li>
           <li>
-            <Link to="community" className="nav__link">
+            <Link to="community" className="nav__link" onClick={handleNav}>
               Community
             </Link>
           </li>
+          <button className="connect nav__link cta" onClick={props.onOpen}>
+            Connect wallet
+          </button>
         </ul>
       </nav>
-      <button className="connect nav__link cta" onClick={props.onOpen}>
-        Connect wallet
-      </button>
       <button class="btn-mobile-nav">
         <AiOutlineMenu className="menu" onClick={handleNav} />
         <AiOutlineClose className="close" onClick={handleNav} />

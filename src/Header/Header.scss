@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fdf2e9;
+  background-color: #fff;
 
   position: relative;
 
@@ -45,11 +45,18 @@
   font-size: 2rem;
   font-weight: 600;
   padding: 1.6rem 3.2rem;
+  margin-left: 18rem;
   border-radius: 9px;
   transition: all 0.3s;
 
   border: none;
   cursor: pointer;
+}
+
+@media (max-width: 59em) {
+  .connect {
+    margin-left: 0;
+  }
 }
 
 .connect,
@@ -59,7 +66,7 @@
   border-radius: 9px;
   color: #fff;
   background: linear-gradient(90deg, #a02279 11.45%, #a02279 11.45%);
-  transition: all 0.3s;
+  transition: all 0.3s ease-in-out;
 }
 
 .nav__link.cta:hover,
