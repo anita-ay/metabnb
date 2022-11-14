@@ -1,35 +1,55 @@
-// import { ReactComponent as Logo } from "../asset/";
+import React, { useState } from "react";
 import "./Header.scss";
-import logo from "../asset/logo.png";
-export function Header() {
+
+import metaLogo from "../asset/meta-logo.png";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { Link } from "react-router-dom";
+
+function Header(props) {
+  const [showNav, setShowNav] = useState(false);
+
+  const handleNav = () => {
+    setShowNav(!showNav);
+    console.log(showNav);
+  };
   return (
-    <nav className="nav">
-      <div className="logo">
-        <img src={logo} alt="logo" className="logo-img" />
-      </div>
-      <ul className="header__ul">
-        <li className="nav-link">
-          <a href="home" className="link">
-            Home
-          </a>
-        </li>
-        <li className="nav-link">
-          <a href="place" className="link">
-            Place to stay
-          </a>
-        </li>
-        <li className="nav-link">
-          <a href="nft" className="link">
-            NFTS
-          </a>
-        </li>
-        <li class="nav-link">
-          <a href="community" className="link">
-            Community
-          </a>
-        </li>
-      </ul>
-      <button class="cta btn-small">Connect Wallet</button>
-    </nav>
+    <header className={`header ${showNav ? "nav-open" : ""}`}>
+      <a href="/" className="header__logo">
+        <img src={metaLogo} alt="metabnb logo" className="logo" />
+      </a>
+      <nav className={`nav `}>
+        <ul className="nav__list">
+          <li>
+            <Link to="/" className="nav__link">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="place" className="nav__link">
+              Place to stay
+            </Link>
+          </li>
+          <li>
+            <Link to="nft" className="nav__link">
+              NFTS
+            </Link>
+          </li>
+          <li>
+            <Link to="community" className="nav__link">
+              Community
+            </Link>
+          </li>
+        </ul>
+      </nav>
+      <button className="connect nav__link cta" onClick={props.onOpen}>
+        Connect wallet
+      </button>
+      <button class="btn-mobile-nav">
+        <AiOutlineMenu className="menu" onClick={handleNav} />
+        <AiOutlineClose className="close" onClick={handleNav} />
+      </button>
+    </header>
   );
 }
+
+export default Header;
