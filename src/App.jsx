@@ -11,20 +11,24 @@ import { Modal } from "./Modal/Modal";
 import { Route, Switch } from "react-router-dom";
 import Community from "./Pages/Community";
 import Metaverse from "./Pages/Metaverse";
+import crossIcon from "./asset/cross.png";
+import metaMask from "./asset/meta-mask.png";
+import walletConnect from "./asset/wallectconnect.png";
+import chevronRight from "./asset/chevron-right.png";
 
 function App() {
-  const [cartIsShown, setCartIsShown] = useState(false);
+  const [modalIsShown, setModalIsShown] = useState(false);
 
-  const showCartHandler = () => {
-    setCartIsShown(true);
+  const showModalHandler = () => {
+    setModalIsShown(true);
   };
 
-  const hideCartHandler = () => {
-    setCartIsShown(false);
+  const hideModalHandler = () => {
+    setModalIsShown(false);
   };
   return (
     <div className="containe">
-      <Header onOpen={showCartHandler} />
+      <Header onOpen={showModalHandler} />
       <main>
         <Switch>
           <Route exact path="/">
@@ -45,10 +49,27 @@ function App() {
         </Switch>
       </main>
       <Footer />
-      {cartIsShown && (
-        <Modal onClose={hideCartHandler}>
-          <h1 onClick={hideCartHandler}>Hello</h1>
-          <p>I am a modal window</p>
+      {modalIsShown && (
+        <Modal onClose={hideModalHandler}>
+          <div className="Heading">
+            <p className="title">Connect Wallet</p>
+            <figure className="cross">
+              <img src={crossIcon} alt="cross" className="cross-icon" />
+            </figure>
+          </div>
+          <span className="sub-title">Choose your preferred wallet:</span>
+          <div className="modal-buttons">
+            <button className="wallet-type">
+              <img src={metaMask} alt="Metamask" className="btn-logo" />
+              <p className="btn-text">Metamask</p>
+              <img src={chevronRight} alt="chevron" className="chevron-icon" />
+            </button>
+            <button className="wallet-type">
+              <img src={walletConnect} alt="Metamask" className="btn-logo" />
+              <p className="btn-text">WalletConnect</p>
+              <img src={chevronRight} alt="chevron" className="chevron-icon" />
+            </button>
+          </div>
         </Modal>
       )}
     </div>
