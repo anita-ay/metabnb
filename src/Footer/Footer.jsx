@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.scss";
-import metaLogo from "../asset/meta-logo.png";
+import metaLogo from "../asset/footer-logo.png";
 import { ReactComponent as Facebook } from "../asset/facebook.svg";
 import { ReactComponent as Instagram } from "../asset/instagram.svg";
 import { ReactComponent as Twitter } from "../asset/twitter.svg";
