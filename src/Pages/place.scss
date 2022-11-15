@@ -13,13 +13,22 @@
 .mininav-btn {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 7%;
-  padding: 0.5rem;
+  gap: 1.5rem;
+  // justify-content: space-between;
+  width: 8%;
+  padding: 0.5rem 1rem;
   border: none;
+  background-color: #fff;
+  border: 1px solid #b4b4b4;
+  border-radius: 8px;
+}
+
+.btn-text {
+  font-size: 1rem;
+  color: #333;
 }
 
 .settings {
   display: inline-block;
-  width: 1.2rem;
+  width: 1.5rem;
 }
