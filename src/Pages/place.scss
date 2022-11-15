@@ -13,11 +13,9 @@
 .mininav-btn {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
-  // justify-content: space-between;
+  justify-content: space-between;
   width: 8%;
   padding: 0.5rem 1rem;
-  border: none;
   background-color: #fff;
   border: 1px solid #b4b4b4;
   border-radius: 8px;
@@ -31,4 +29,27 @@
 .settings {
   display: inline-block;
   width: 1.5rem;
+}
+
+@media (max-width: 54em) {
+  .mininav-btn {
+    width: 4%;
+    justify-content: center;
+  }
+
+  .btn-text {
+    display: none;
+  }
+}
+
+@media (max-width: 35em) {
+  .mininav-btn {
+    border: none;
+  }
+}
+
+@media (max-width: 22em) {
+  .miniNav {
+    display: none;
+  }
 }
