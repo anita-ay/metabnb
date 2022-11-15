@@ -278,6 +278,16 @@ body {
   font-weight: 700;
 }
 
+.cross {
+  color: #434343;
+  transition: all 0.3s ease-in-out;
+}
+
+.cross:hover {
+  cursor: pointer;
+  color: #222;
+}
+
 .icon {
   display: inline-block;
   width: 1.5rem;
@@ -314,11 +324,15 @@ body {
   background-color: #f7f7f7;
 }
 
+.wallet-box {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  /* width: 30%;/ */
+}
+
 .btn-logo {
   display: inline-block;
   width: 3rem;
-}
-
-.chevron {
-  margin-left: auto;
+  margin-right: 1.2rem;
 }

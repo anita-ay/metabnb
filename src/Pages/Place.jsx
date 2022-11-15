@@ -1,6 +1,6 @@
 import React from "react";
+import "./place.scss";
 import Card from "../Card/Card";
-import "../Adventure/Adventure.scss";
 import Grid1 from "../asset/img-1.png";
 import Grid2 from "../asset/img-2.png";
 import Grid3 from "../asset/img-3.png";
@@ -33,9 +33,7 @@ function Place(props) {
         <li className="mininav-list">Farm</li>
         <button className="mininav-btn">
           <div className="btn-text">Location</div>
-          <div className="btn-icon">
-            <img src={Settings} alt="settings" className="settings" />
-          </div>
+          <img src={Settings} alt="settings" className="settings" />
         </button>
       </ul>
 

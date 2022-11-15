@@ -1,0 +1,25 @@
+.container {
+  padding-bottom: 2rem;
+}
+
+.miniNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  padding-bottom: 2rem;
+}
+
+.mininav-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 7%;
+  padding: 0.5rem;
+  border: none;
+}
+
+.settings {
+  display: inline-block;
+  width: 1.2rem;
+}

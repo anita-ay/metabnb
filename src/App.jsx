@@ -64,16 +64,20 @@ function App() {
           </div>
           <span className="sub-title">Choose your preferred wallet:</span>
           <div className="modal-buttons">
-            <button className="wallet-type">
-              <img src={metaMask} alt="Metamask" className="btn-logo" />
-              <p className="btn-text">Metamask</p>
+            <div className="wallet-type">
+              <div className="wallet-box">
+                <img src={metaMask} alt="Metamask" className="btn-logo" />
+                <p className="btn-text">Metamask</p>
+              </div>
               <img src={chevronRight} alt="chevron" className="chevron icon" />
-            </button>
-            <button className="wallet-type">
-              <img src={walletConnect} alt="Metamask" className="btn-logo" />
-              <p className="btn-text">WalletConnect</p>
+            </div>
+            <div className="wallet-type">
+              <div className="wallet-box">
+                <img src={walletConnect} alt="Metamask" className="btn-logo" />
+                <p className="btn-text">WalletConnect</p>
+              </div>
               <img src={chevronRight} alt="chevron" className="chevron icon" />
-            </button>
+            </div>
           </div>
         </Modal>
       )}
